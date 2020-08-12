@@ -5,13 +5,13 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-
+console.log(generateMarkdown())
 function promptUser() {
   return inquirer.prompt([
     {
       type: "input",
-      name: "title",
-      message: "What is your project name?"
+      message: "What is your project name?",
+      name: "title"
     },
     {
       type: "input",
@@ -49,33 +49,21 @@ function promptUser() {
         "None"
       ]
     }
-  ])
-};
-
-
-function generateMarkdownform(response) {
-  return
-  `# ${response.title}
-
-  ## Table of Contents
-
-  *[Description](#description)
-  `
-};
-
-
+  ]);
+}
 
 
 async function init() {
   console.log("hi")
   try {
+
     const answers = await promptUser();
+    console.log(generateMarkdown(answers))
+    const md = generateMarkdown(answers);
 
-    const md = generateMarkdownform(answers);
+    await writeFileAsync("generatedREADME.md", md);
 
-    await writeFileAsync("README.md", md);
-
-    console.log("Successfully wrote to index.html");
+    console.log("Successfully generated README.md");
   } catch (err) {
     console.log(err);
   }
