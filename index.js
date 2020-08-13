@@ -3,9 +3,10 @@ const fs = require("fs")
 const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown");
 
+// write README file
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// console.log(generateMarkdown())
+// array of questions for user
 function promptUser() {
   return inquirer.prompt([
     {
@@ -34,8 +35,8 @@ function promptUser() {
       message: "Please choose a license.",
       choices: [
         "Apache",
-        "GNU",
         "MIT",
+        "ISC",
         "None"
       ]
     },
@@ -62,9 +63,9 @@ function promptUser() {
   ]);
 }
 
-
+// function to initialize program
 async function init() {
-  console.log("hi")
+  console.log("Initializing...")
   try {
 
     const answers = await promptUser();
@@ -73,32 +74,9 @@ async function init() {
 
     await writeFileAsync("generatedREADME.md", generateMarkdown(answers));
 
-    console.log("Successfully generated README.md");
+    console.log("README.md generated successfully");
   } catch (err) {
     console.log(err);
   }
 }
-
 init();
-
-
-
-
-
-
-// // array of questions for user
-// const questions = [
-
-// ];
-
-// // function to write README file
-// function writeToFile(fileName, data) {
-// }
-
-// // function to initialize program
-// function init() {
-
-// }
-
-// // function call to initialize program
-// init();

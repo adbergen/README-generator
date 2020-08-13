@@ -4,7 +4,9 @@
 
 ---
 
-![demo of website](assets/img/demo.png)
+[Video walkthrough](https://drive.google.com/file/d/1GSQXny40JmoWirpDX4inkNKwIUCzE51e/view)
+
+![image of demo](/img/demo.png)
 
 ## File Contents
 
@@ -22,6 +24,8 @@
 - package-lock.json
 
 - .gitignore
+
+- demo.png
 
 ```
 
