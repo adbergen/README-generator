@@ -7,6 +7,7 @@
 [Video walkthrough](https://drive.google.com/file/d/1GSQXny40JmoWirpDX4inkNKwIUCzE51e/view)
 
 ![image of demo](/img/demo.png)
+![image of demo](/img/demo1.png)
 
 ## File Contents
 
@@ -26,6 +27,8 @@
 - .gitignore
 
 - demo.png
+
+- demo1.png
 
 ```
 
