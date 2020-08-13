@@ -5,13 +5,13 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-console.log(generateMarkdown())
+// console.log(generateMarkdown())
 function promptUser() {
   return inquirer.prompt([
     {
       type: "input",
-      message: "What is your project name?",
-      name: "title"
+      name: "title",
+      message: "Please enter your project name?"
     },
     {
       type: "input",
@@ -29,16 +29,6 @@ function promptUser() {
       message: "Please enter usage information."
     },
     {
-      type: "input",
-      name: "contribution",
-      message: "Please enter your contribution guidelines."
-    },
-    {
-      type: "input",
-      name: "test",
-      message: "Please enter your test instructions."
-    },
-    {
       type: "checkbox",
       name: "license",
       message: "Please choose a license.",
@@ -48,6 +38,26 @@ function promptUser() {
         "MIT",
         "None"
       ]
+    },
+    {
+      type: "input",
+      name: "contributing",
+      message: "Please enter your contribution guidelines."
+    },
+    {
+      type: "input",
+      name: "test",
+      message: "Please enter your test instructions"
+    },
+    {
+      type: "input",
+      name: "username",
+      message: "Please enter your gitHub username"
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "Please enter your email address."
     }
   ]);
 }
@@ -58,10 +68,10 @@ async function init() {
   try {
 
     const answers = await promptUser();
-    console.log(generateMarkdown(answers))
-    const md = generateMarkdown(answers);
 
-    await writeFileAsync("generatedREADME.md", md);
+    console.log(generateMarkdown(answers))
+
+    await writeFileAsync("generatedREADME.md", generateMarkdown(answers));
 
     console.log("Successfully generated README.md");
   } catch (err) {
