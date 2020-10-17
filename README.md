@@ -1,68 +1,83 @@
-# README Generator
+<h1 align="center">
+README Generator
+</h1>
+<h4 align="center" style="margin-bottom:10px">Be sure to star my configuration repo so you can keep up to date on any daily progress!</h4>
+<div align="center">
+  <h4>
+    </a>
+    <a href="https://github.com/adbergen/README-generator/stargazers"><img src="https://img.shields.io/github/stars/adbergen/README-generator.svg?style=plasticr"/></a>
+    <a href="https://github.com/adbergen/README-generator/commits/master"><img src="https://img.shields.io/github/last-commit/adbergen/README-generator.svg?style=plasticr"/></a>
+        <a href="https://github.com/adbergen/README-generator/commits/master"><img src="https://img.shields.io/github/commit-activity/y/adbergen/README-generator.svg?style=plasticr"/></a>
+</h4>
+<br>
+</div>
+<p align="center"><font size="3">
+This is a README generator application</p>
+<div align="center"><a name="menu"></a>
+  <h4>
+    <a href="https://github.com/adbergen/README-generator">
+      Github Repository
+    </a>
+<span> | </span>
+<a href="https://adbergen.github.io/README-generator/">
+      Github Pages
+    </a>
+    <span> | </span>
+<a href="https://drive.google.com/file/d/1GSQXny40JmoWirpDX4inkNKwIUCzE51e/view">
+      Video Walkthrough
+    </a>
+  </h4>
+</div>
 
-- This is a README Generator application that allows the user to generate a readme that includes answers relevant to the user's github project. This application will run in the browser with a clean and polished user interface.
+![Screenshot of application demo](img/demo.png)
+![Screenshot of application demo](img/demo1.png)
 
----
+<hr>
 
-[Video walkthrough](https://drive.google.com/file/d/1GSQXny40JmoWirpDX4inkNKwIUCzE51e/view)
+## Table of Contents
 
-![image of demo](/img/demo.png)
-![image of demo](/img/demo1.png)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
 
-## File Contents
+<hr>
 
-```
-- README.md (this file)
+## Installation
 
-- index.js
+<br>
+Using npm:
 
-- generateMarkdown.js
+<br>
+<br>
 
-- generatedREADME.md
+    npm install && node index
 
-- package.json
+<hr>
 
-- package-lock.json
+## Usage
 
-- .gitignore
+- This application allows the user to generate a readme that includes answers relevant to the user's github project
 
-- demo.png
+<hr>
 
-- demo1.png
+## Technologies
 
-```
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Bootstrap</li>
+<li>Javascript, JQuery, JSON</li>
+<li>Node.js</li>
+<li>GitHub</li>
+</ul>
 
----
+<hr>
 
-## Languages Used
+## Contributing
 
-```
-- node.js is used as the runtime environment
+- Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-- Javascript, JQuery, and JSON are used as the interpreters
+- Contributors: Anthony Bergen
 
-```
-
----
-
-## Requirements Met
-
-```
-- Functional, deployed application to GitHub Pages
-
-- GitHub repository with README describing the project
-
-- .gitignore file created to include node_modules/ and .DS_Store/
-
-- package.json included with required dependencies
-
-- Video of the typical user flow through application including views of prompts and responses
-
-- 1 badge included
-
-- Sections included: title, description, table of contents, installation, usage, license, contributing, tests, questions
-
-```
-
----
----
+<hr><hr>
